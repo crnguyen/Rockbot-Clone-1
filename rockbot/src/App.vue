@@ -1,17 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="Rockbot logo" src="./assets/logo.png" height="200px">
+    <Rockbot msg="Mini Rockbot"/>
+    <p>Designed by: Cristina Nguyen</p>
+    <a href="https://www.linkedin.com/in/cristinanguyen/" target="_blank" class="li-ic mr-3" role="button"><mdb-icon fab icon="linkedin-in" size="lg"/></a>
+    <a href="https://github.com/crnguyen" target="_blank" class="git-ic mr-3" role="button"><mdb-icon fab icon="github" size="lg"/></a>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Rockbot from './components/RockbotDisplay.vue'
+import { mdbIcon } from 'mdbvue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Rockbot,
+    mdbIcon
   }
 }
 </script>
@@ -23,6 +28,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+
 </style>
