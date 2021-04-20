@@ -7,37 +7,71 @@
 
     <h3>Now Playing</h3>
     <!-- this is where the NowPlaying component renders -->
+    <NowPlaying/>
     
     <h3>Coming Up</h3>
     <!-- this is where the Queue component renders -->
+    <Queue/>
 
     <div class="bottomTab">
       <h3 class="grid-child nowPlayingTab">Now Playing</h3>
       <!-- if you click on Now Playing tab, render the Now Playing component -->
       
-      <h3 class="grid-child requestTab" id="request">Request</h3>
+      <h3 v-on:click="showRequest" class="grid-child requestTab" id="request">Request</h3>
       <!-- if you click on Request tab, render the Request component -->
+      <Request/>
     </div>
   </div>
 </template>
 
 <script>
-import axios from 'axios';
+import Vue from 'vue'
+import Request from './Request.vue'
+import NowPlaying from './NowPlaying.vue'
+import Queue from './Queue.vue'
+
 export default {
   name: 'RockbotDisplay',
   props: {
     msg: String
+  },
+  components: {
+    Request,
+    NowPlaying,
+    Queue
   }
+
 }
 
-axios({
-      baseURL: 'https://api.rockbot.com/v3/engage/now_playing',
-      auth: "2ab742c917f872aa88644bc8f995e03159b2",
-      // params: { query: 'donkey', page: '1', per_page: '1' }  
-}).then(res => console.log(res));
+//this API call is working
+    fetch("https://api.rockbot.com/v3/engage/now_playing", {
+    method: "GET",
+    headers: {
+      Authorization: "2ab742c917f872aa88644bc8f995e03159b2"
+    }
+  })
+    .then(res => res.json())
+    .then(response => {
+      console.log(response);
+    });
 
-console.log(process.env.VUE_APP_ROOT_API)
-  
+new Vue({
+  el: '#request',
+  data: {
+    name: 'Vue.js'
+  },
+  // define methods under the `methods` object
+  methods: {
+    showRequest: function (event) {
+      // `this` inside methods points to the Vue instance
+      console.log("hi")
+      // `event` is the native DOM event
+      if (event) {
+        alert(event.target.tagName)
+      }
+    }
+  }
+})
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
