@@ -19,7 +19,7 @@
 - Display data on page
 - Finish NowPlaying component
 #### Progress Pic
-[Imgur](https://i.imgur.com/jvJLmW4.png)
+![Imgur](https://i.imgur.com/jvJLmW4.png)
 
 ## Day Three
 
