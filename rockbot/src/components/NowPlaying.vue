@@ -1,21 +1,18 @@
 <template>
     <div id="nowPlaying1">
-        {{music}}
-        <h5>This is the now playing component</h5>
+        <h4>{{music.response.now_playing.artist}}</h4>
+        <img :src= music.response.now_playing.artwork_small style="height:150px;width:150px" alt="">
     </div>
 </template>
 
 <script>
-import Vue from "vue"
-
-export default new Vue({
-  el: '#nowPlaying1',
+export default {
+//   el: '#nowPlaying1', el only needed during new vue instance creation
   data() {
     return {
       music: null
     }
   },
-  template: '<div id="nowPlaying1">{{ music }}</div>',
   mounted() {
     fetch("https://api.rockbot.com/v3/engage/now_playing", {
     method: "GET",
@@ -26,14 +23,17 @@ export default new Vue({
     .then(res => res.json())
     .then(response => (this.music = response))
     .then(response => {
-      console.log(response.response.now_playing.artist);
+      console.log(response);
     })
     .catch(err => {
         console.log(err);
     })
   }
-})
+}
 </script>
 
 <style>
+img {
+  border-radius: 50%;
+}
 </style>

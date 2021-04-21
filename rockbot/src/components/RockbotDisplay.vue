@@ -7,7 +7,7 @@
 
     <h3>Now Playing</h3>
     <!-- this is where the NowPlaying component renders -->
-    {{music}}
+    <!-- {{music}} -->
     <NowPlaying/>
     
     <h3>Coming Up</h3>
