@@ -1,6 +1,6 @@
 <template>
     <div id="nowPlaying1">
-        <h4>{{music.response.now_playing.artist}}</h4>
+        <h4>Artist: {{music.response.now_playing.artist}}</h4>
         <img :src= music.response.now_playing.artwork_small style="height:150px;width:150px" alt="">
     </div>
 </template>
@@ -32,7 +32,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 img {
   border-radius: 50%;
 }
