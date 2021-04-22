@@ -2,9 +2,12 @@
   <div id="app">
     <img alt="Rockbot logo" src="./assets/logo.png" height="200px">
     <Rockbot msg="Mini Rockbot"/>
-    <p>Designed by: Cristina Nguyen</p>
-    <a href="https://www.linkedin.com/in/cristinanguyen/" target="_blank" class="li-ic mr-3" role="button"><mdb-icon fab icon="linkedin-in" size="lg"/></a>
-    <a href="https://github.com/crnguyen" target="_blank" class="git-ic mr-3" role="button"><mdb-icon fab icon="github" size="lg"/></a>
+    <div id="credits">
+      <p>Designed by: Cristina Nguyen</p>
+      <a href="https://www.linkedin.com/in/cristinanguyen/" target="_blank" class="li-ic mr-3" role="button"><mdb-icon fab icon="linkedin-in" size="lg"/></a>
+      <a href="https://github.com/crnguyen" target="_blank" class="git-ic mr-3" role="button"><mdb-icon fab icon="github" size="lg"/></a>
+    </div>
+    
   </div>
 </template>
 
@@ -29,6 +32,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   /* margin-top: 60px; */
+}
+
+#credits {
+  padding-top: 15px;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');

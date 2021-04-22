@@ -7,7 +7,6 @@
 
     <h3>Now Playing</h3>
     <!-- this is where the NowPlaying component renders -->
-    <!-- {{music}} -->
     <NowPlaying/>
     
     <h3>Coming Up</h3>
@@ -24,7 +23,6 @@
 </template>
 
 <script>
-// import Vue from 'vue'
 import NowPlaying from './NowPlaying.vue'
 import Queue from './Queue.vue'
 
@@ -44,7 +42,12 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
-  margin: 40px 0 0;
+  margin: 20px 0 0 0;
+  font-weight: bold;
+  text-decoration: underline;
+  letter-spacing: 3;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 10px;
 }
 
 ul {
@@ -63,14 +66,14 @@ a {
   border: black solid 2px;
   width: 60%;
   margin: auto;
+  box-shadow: 5px 9px #888888;
 }
 
 .titleDisplay {
   background-color: #017EE4;
   color: white;
-  padding-top: 0px;
   font-size: 25px;
-  font-weight: bold;
+  letter-spacing: 5;
   border-bottom: black solid 2px;
 }
 
