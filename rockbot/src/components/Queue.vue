@@ -2,8 +2,12 @@
     <!-- this component should include now playing data from API 
     and the Queue component below it -->
     <div id="Queue">
-        <h4>This is the queue component</h4>
-        {{music.artist}}
+        <div v-for="(item, index) in music" :key="index">
+            <h6>Artist: {{music.artist}}</h6>
+            <h6>Song: {{music.song}}</h6>
+            <h6>Likes: {{music.likes}}</h6>
+            <img :src= music.artwork_small style="height:50px;width:50px" alt="">
+        </div>
     </div>
 </template>
 
@@ -24,10 +28,11 @@ export default {
   })
     .then(res => res.json())
     .then(response => (this.music = response.response.queue[0]))
+    //response.response.queue[0] = first song/artist in queue
     //loop through queue and display the artist and small artwork
     //include button to like the artist
     .then(response => {
-      console.log(response.response.queue[0]);
+      console.log(response);
     })
     .catch(err => {
         console.log(err);
@@ -36,5 +41,16 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+#Queue {
+    text-align: left;
+    padding-left: 15px;
+    height: 200px;
+    overflow-x: scroll;
+}
+
+img {
+    border-radius: 50%;
+}
 </style>

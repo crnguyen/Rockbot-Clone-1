@@ -61,7 +61,7 @@ a {
 
 .mainDisplay {
   border: black solid 2px;
-  width: 80%;
+  width: 60%;
   margin: auto;
 }
 
