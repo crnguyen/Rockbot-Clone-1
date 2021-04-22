@@ -52,6 +52,7 @@ img {
     max-height: 130px;
     line-height: 110%;
     padding-left: 10px;
+    padding-right: 10px;
 }
 
 p {

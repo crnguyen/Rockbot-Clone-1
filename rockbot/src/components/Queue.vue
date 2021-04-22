@@ -26,7 +26,6 @@ export default {
       like: function() {
           console.log("you clicked the icon");
           this.counter += 1;
-          
       }
   },
 //   el: '#nowPlaying1', el only needed during new vue instance creation

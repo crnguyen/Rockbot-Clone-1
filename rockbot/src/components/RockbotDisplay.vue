@@ -14,7 +14,7 @@
     <Queue/>
 
     <div class="bottomTab" id="bottomTab">
-        <button class="grid-child nowPlayingTab">Now Playing</button>
+        <button @click.native="lala" class="grid-child nowPlayingTab">Now Playing</button>
       <!-- if you click on Now Playing tab, render the Now Playing component -->
         <button class="grid-child requestTab">Request</button>
       <!-- if you click on Request tab, render the Request component -->
@@ -35,8 +35,12 @@ export default {
     NowPlaying,
     Queue
   },
+  methods: {
+      lala: function() {
+          console.log("you clicked the now playing tab");
+      }
+  },
 }
-    
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
