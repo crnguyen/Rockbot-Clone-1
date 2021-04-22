@@ -8,6 +8,7 @@
             <mdb-icon @click.native="like" icon="plus-circle"/>
             <h6>Likes: {{music.likes}}</h6>
             <img :src= music.artwork_small style="height:50px;width:50px" alt="">
+            <hr/>
         </div>
     </div>
 </template>
@@ -55,13 +56,19 @@ export default {
 <style scoped>
 #Queue {
     text-align: left;
-    padding-left: 15px;
-    padding-bottom: 15px;
+    /* padding-left: 30px;
+    padding-bottom: 15px; */
+    padding: 0px 30px 15px 30px;
     height: 150px;
     overflow-x: scroll;
 }
 
 img {
     border-radius: 50%;
+}
+
+hr {
+    height: 5px;
+    background-color: #d3d3d3;
 }
 </style>
