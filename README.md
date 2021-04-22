@@ -19,14 +19,15 @@
 - Display data on page
 - Finish NowPlaying component
 #### Progress Pic
-![Imgur](https://i.imgur.com/jvJLmW4.png)
+<img src="https://i.imgur.com/jvJLmW4.png" alt="imgur" width="450"/>
 
 ## Day Three
 - Completed NowPlaying and Queue components
 - Worked on styling components
 - Created event listeners and a counter so user can like specific artists
 #### Progress Pic
-![Imgur](https://i.imgur.com/YK9sLWw.png)
+<img src="https://i.imgur.com/YK9sLWw.png" alt="imgur" width="450"/>
+
 ## Day Four
 - Work on Request component
 
