@@ -50,12 +50,13 @@ img {
 
 #artistInfo {
     max-height: 130px;
-    line-height: 0.5;
+    line-height: 110%;
     padding-left: 10px;
 }
 
 p {
     font-size: 20px;
+    /* font-size: 2vw; */
 }
 
 b {

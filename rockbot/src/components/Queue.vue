@@ -6,7 +6,7 @@
             <h6>Artist: {{music.artist}}</h6>
             <h6>Song: {{music.song}}</h6>
             <mdb-icon @click.native="like" icon="plus-circle"/>
-            <h6>Likes: {{music.likes}}</h6>
+            <h6>Likes: {{music.likes}} + {{ counter }}</h6>
             <img :src= music.artwork_small style="height:50px;width:50px" alt="">
             <hr/>
         </div>
@@ -15,20 +15,25 @@
 
 <script>
 import { mdbIcon } from 'mdbvue';
-
+let object = {
+  counter: 0
+}
 export default {
     components: {
     mdbIcon
   },
   methods: {
       like: function() {
-          console.log("you clicked the icon")
+          console.log("you clicked the icon");
+          this.counter += 1;
+          
       }
   },
 //   el: '#nowPlaying1', el only needed during new vue instance creation
   data() {
     return {
-      music: []
+      music: [],
+      object,
     }
   },
   mounted() {
