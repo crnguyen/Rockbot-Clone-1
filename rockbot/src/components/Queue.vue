@@ -2,12 +2,16 @@
     <!-- this component should include now playing data from API 
     and the Queue component below it -->
     <div id="Queue">
-        <div v-for="(music, index) in music" :key="index">
-            <h6>Artist: {{music.artist}}</h6>
-            <h6>Song: {{music.song}}</h6>
-            <mdb-icon @click.native="like" icon="plus-circle"/>
-            <h6>Likes: {{music.likes}} + {{ counter }}</h6>
+        <div v-for="(music, index) in music" :key="index" id="queueInfo">
             <img :src= music.artwork_small style="height:50px;width:50px" alt="">
+            <div id="artistInfo">
+                <h6>Artist: {{music.artist}}</h6>
+                <h6>Song: {{music.song}}</h6>
+            </div>
+            <div id="counterInfo">
+                <mdb-icon @click.native="like" icon="plus-circle"/>
+                <h6>Likes: {{counter}}</h6>
+            </div>
             <hr/>
         </div>
     </div>
@@ -15,9 +19,6 @@
 
 <script>
 import { mdbIcon } from 'mdbvue';
-let object = {
-  counter: 0
-}
 export default {
     components: {
     mdbIcon
@@ -25,14 +26,14 @@ export default {
   methods: {
       like: function() {
           console.log("you clicked the icon");
-          this.counter += 1;
+          this.counter += 1
       }
   },
 //   el: '#nowPlaying1', el only needed during new vue instance creation
   data() {
     return {
       music: [],
-      object,
+      counter: 0,
     }
   },
   mounted() {
@@ -69,6 +70,15 @@ export default {
 
 img {
     border-radius: 50%;
+}
+
+#queueInfo {
+    display: grid;
+    grid-template-columns: 1fr 6fr 2fr;
+}
+
+#artistInfo {
+    padding-left: 5px;
 }
 
 hr {

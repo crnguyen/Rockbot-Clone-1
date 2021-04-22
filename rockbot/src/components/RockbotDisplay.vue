@@ -14,9 +14,9 @@
     <Queue/>
 
     <div class="bottomTab" id="bottomTab">
-        <button @click.native="lala" class="grid-child nowPlayingTab">Now Playing</button>
+        <button v-on:click="nowPlay" class="grid-child nowPlayingTab">Now Playing</button>
       <!-- if you click on Now Playing tab, render the Now Playing component -->
-        <button class="grid-child requestTab">Request</button>
+        <button v-on:click="req" class="grid-child requestTab">Request</button>
       <!-- if you click on Request tab, render the Request component -->
     </div>
   </div>
@@ -36,8 +36,11 @@ export default {
     Queue
   },
   methods: {
-      lala: function() {
-          console.log("you clicked the now playing tab");
+      nowPlay: function() {
+        console.log("you clicked the now playing tab");
+      },
+      req: function() {
+        console.log("clicked Request tab");
       }
   },
 }
