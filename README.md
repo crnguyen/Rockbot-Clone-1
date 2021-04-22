@@ -22,7 +22,13 @@
 ![Imgur](https://i.imgur.com/jvJLmW4.png)
 
 ## Day Three
-
+- Completed NowPlaying and Queue components
+- Worked on styling components
+- Created event listeners and a counter so user can like specific artists
+#### Progress Pic
+![Imgur](https://i.imgur.com/YK9sLWw.png)
+## Day Four
+- Work on Request component
 
 Resources Used
 ---
