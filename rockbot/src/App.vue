@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Rockbot logo" src="./assets/logo.png" height="200px">
+    <img alt="Rockbot logo" src="./assets/logo.png" height="100px">
     <Rockbot msg="Mini Rockbot"/>
     <div id="credits">
       <p>Designed by: Cristina Nguyen</p>

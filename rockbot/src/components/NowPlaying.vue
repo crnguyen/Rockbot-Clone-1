@@ -2,7 +2,7 @@
     <div id="nowPlaying1">
         <h5>Artist: {{music.response.now_playing.artist}}</h5>
         <h5>Song: {{music.response.now_playing.song}}</h5>
-        <img :src= music.response.now_playing.artwork_small style="height:150px;width:150px" alt="">
+        <img :src= music.response.now_playing.artwork_small style="height:130px;width:130px" alt="">
     </div>
 </template>
 

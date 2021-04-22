@@ -5,7 +5,7 @@
         <div v-for="(music, index) in music" :key="index">
             <h6>Artist: {{music.artist}}</h6>
             <h6>Song: {{music.song}}</h6>
-            <mdb-icon icon="plus-circle"/>
+            <mdb-icon @click.native="like" icon="plus-circle"/>
             <h6>Likes: {{music.likes}}</h6>
             <img :src= music.artwork_small style="height:50px;width:50px" alt="">
         </div>
@@ -18,6 +18,11 @@ import { mdbIcon } from 'mdbvue';
 export default {
     components: {
     mdbIcon
+  },
+  methods: {
+      like: function() {
+          console.log("you clicked the icon")
+      }
   },
 //   el: '#nowPlaying1', el only needed during new vue instance creation
   data() {
@@ -48,12 +53,11 @@ export default {
 </script>
 
 <style scoped>
-
 #Queue {
     text-align: left;
     padding-left: 15px;
     padding-bottom: 15px;
-    height: 200px;
+    height: 150px;
     overflow-x: scroll;
 }
 
