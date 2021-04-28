@@ -13,10 +13,14 @@
     <!-- this is where the Queue component renders -->
     <Queue/>
 
+    <!-- Hidden until button is clicked -->
+    <h3>Request</h3>
+    <Request/>
+
     <div class="bottomTab" id="bottomTab">
-        <button v-on:click="nowPlay" class="grid-child nowPlayingTab">Now Playing</button>
+        <button v-on:click="isHidden = true" class="grid-child nowPlayingTab">Now Playing</button>
       <!-- if you click on Now Playing tab, render the Now Playing component -->
-        <button v-on:click="req" class="grid-child requestTab">Request</button>
+        <button v-on:click="isHidden = !isHidden" class="grid-child requestTab">Request</button>
       <!-- if you click on Request tab, render the Request component -->
     </div>
   </div>
@@ -25,6 +29,7 @@
 <script>
 import NowPlaying from './NowPlaying.vue'
 import Queue from './Queue.vue'
+import Request from './Request.vue'
 
 export default {
   name: 'RockbotDisplay',
@@ -33,14 +38,22 @@ export default {
   },
   components: {
     NowPlaying,
-    Queue
+    Queue,
+    Request
+  },
+  data() {
+    return {
+      isHidden: false
+    }
   },
   methods: {
       nowPlay: function() {
         console.log("you clicked the now playing tab");
+        //show the now NowPlaying component, hide the Request component
       },
       req: function() {
         console.log("clicked Request tab");
+        //show the Request component and hide the NowPlaying component
       }
   },
 }
