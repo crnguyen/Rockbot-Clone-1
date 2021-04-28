@@ -5,22 +5,16 @@
       {{ msg }}
     </div>
 
-    <h3>Now Playing</h3>
-    <!-- this is where the NowPlaying component renders -->
-    <NowPlaying/>
+    <component :is="current"></component>
     
     <h3>Coming Up</h3>
     <!-- this is where the Queue component renders -->
     <Queue/>
 
-    <!-- Hidden until button is clicked -->
-    <h3>Request</h3>
-    <Request/>
-
     <div class="bottomTab" id="bottomTab">
         <button 
         class="grid-child nowPlayingTab"
-        @click="current= 'nowPlaying'">
+        @click="current= 'nowPlaying','Queue'">
         Now Playing</button>
       <!-- if you click on Now Playing tab, render the Now Playing component -->
         <button
@@ -28,7 +22,6 @@
         @click="current= 'Request'">
         Request</button>
       <!-- if you click on Request tab, render the Request component -->
-      <component :is="current"></component>
     </div>
   </div>
 </template>
@@ -58,7 +51,7 @@ export default {
   },
   data(){
     return {
-      current: "NowPlaying"
+      current: ["NowPlaying", "Queue"]
     }
   },
   methods: {
