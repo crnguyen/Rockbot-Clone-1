@@ -18,10 +18,17 @@
     <Request/>
 
     <div class="bottomTab" id="bottomTab">
-        <button v-on:click="isHidden = true" class="grid-child nowPlayingTab">Now Playing</button>
+        <button 
+        class="grid-child nowPlayingTab"
+        @click="current= 'nowPlaying'">
+        Now Playing</button>
       <!-- if you click on Now Playing tab, render the Now Playing component -->
-        <button v-on:click="isHidden = !isHidden" class="grid-child requestTab">Request</button>
+        <button
+        class="grid-child requestTab"
+        @click="current= 'Request'">
+        Request</button>
       <!-- if you click on Request tab, render the Request component -->
+      <component :is="current"></component>
     </div>
   </div>
 </template>
@@ -30,6 +37,14 @@
 import NowPlaying from './NowPlaying.vue'
 import Queue from './Queue.vue'
 import Request from './Request.vue'
+
+// const nowPlaying ={
+//   template:"<NowPlaying/>"
+// }
+
+// const request ={
+//   template:"<Request/>"
+// }
 
 export default {
   name: 'RockbotDisplay',
@@ -41,9 +56,9 @@ export default {
     Queue,
     Request
   },
-  data() {
+  data(){
     return {
-      isHidden: false
+      current: "NowPlaying"
     }
   },
   methods: {

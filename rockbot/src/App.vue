@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <img alt="Rockbot logo" src="./assets/logo.png" height="100px">
-    <Rockbot msg="Mini Rockbot"/>
+    <Rockbot msg="Mini Rockbot"/> 
+
     <div id="credits">
       <p>Designed by: Cristina Nguyen</p>
       <a href="https://www.linkedin.com/in/cristinanguyen/" target="_blank" class="li-ic mr-3" role="button"><mdb-icon fab icon="linkedin-in" size="lg"/></a>
@@ -19,8 +20,8 @@ export default {
   name: 'App',
   components: {
     Rockbot,
-    mdbIcon
-  }
+    mdbIcon,
+  },
 }
 </script>
 
