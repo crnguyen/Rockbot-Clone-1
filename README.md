@@ -24,12 +24,17 @@
 ## Day Three
 - Completed NowPlaying and Queue components
 - Worked on styling components
-- Created event listeners and a counter so user can like specific artists
+- Created event listeners and a counter so user can like artists
 #### Progress Pic
 <img src="https://i.imgur.com/YK9sLWw.png" alt="imgur" width="450"/>
 
-## Day Four
-- Work on Request component
+## Day Four/Five
+- Work on Request component including API call
+- Figure out how to switch components on button click
+- Set up Top Artists component and implement it on the Request component
+
+#### Final - Progress Gif
+![GIF](https://media.giphy.com/media/G8axfofNOXuCOBKDrl/giphy.gif)
 
 Resources Used
 ---

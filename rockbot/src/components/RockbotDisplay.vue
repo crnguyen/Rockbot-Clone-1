@@ -44,16 +44,16 @@ export default {
       current: "Songs"
     }
   },
-  methods: {
-      nowPlay: function() {
-        console.log("you clicked the now playing tab");
-        //show the now NowPlaying component, hide the Request component
-      },
-      req: function() {
-        console.log("clicked Request tab");
-        //show the Request component and hide the NowPlaying component
-      }
-  },
+  // methods: {
+  //     nowPlay: function() {
+  //       console.log("you clicked the now playing tab");
+  //       //show the now NowPlaying component, hide the Request component
+  //     },
+  //     req: function() {
+  //       console.log("clicked Request tab");
+  //       //show the Request component and hide the NowPlaying component
+  //     }
+  // },
 }
 </script>
 

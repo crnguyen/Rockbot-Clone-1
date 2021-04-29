@@ -21,7 +21,7 @@ components: {
 }
 </script>
 
-<style scoped>
+<style>
 h3 {
   margin: 20px 0 0 0;
   font-weight: bold;

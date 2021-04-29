@@ -6,6 +6,7 @@
             <input type="text" aria-label="Search" v-model="search" placeholder="Search artist">
         </div> 
         <button
+        id="submitButton"
         type="submit"
         v-on:click="getData">Submit
         </button>
@@ -57,18 +58,6 @@
 </script>
 
 <style scoped>
-    h3 {
-    margin: 20px 0 0 0;
-    font-weight: bold;
-    text-decoration: underline;
-    text-align: left;
-    letter-spacing: 3;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-top: 20px;
-    }
-
     #request {
         display: block;
     }
@@ -91,6 +80,18 @@
 
     #addToQueueButton {
         width: 90px;
-        font-size: 10px;
+        font-size: 11px;
+        background-color: #1865AA;
+        color: white;
+        border-radius: 10px;
+        border: none;
+    }
+
+    #submitButton {
+        margin: 5px;
+        background-color: #017EE4;
+        color: white;
+        border-radius: 10px;
+        border: none;
     }
 </style>
