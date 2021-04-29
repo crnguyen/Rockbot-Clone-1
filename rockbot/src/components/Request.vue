@@ -1,5 +1,6 @@
 <template>
     <div id="request">
+        <TopArtist/>
         <h3>Search</h3>
         <div class="searchBar">
             <input type="text" v-model="search" placeholder="Search artist">
@@ -9,16 +10,20 @@
         v-on:click="getData">submit
         </button>
 
-        <div v-for="(artist, index) in artist" :key="index">
+        <div v-for="(artist, index) in artist" :key="index" id="artistInfo">
             {{artist.artist}}
         </div>
     </div>
 </template>
 
 <script>
+import TopArtist from "./TopArtists"
 // request artist 
 export default {
 //   el: '#nowPlaying1', el only needed during new vue instance creation
+components: {
+    TopArtist
+  },
   data() {
     return {
       artist: []
@@ -40,8 +45,8 @@ export default {
         .catch(err => {
             console.log("search error:", err);
         })
-        }
     }
+  }
 }
 </script>
 
@@ -65,6 +70,10 @@ h3 {
 input {
     width: 200px;
     padding-left: 20px;
+}
+
+#artistInfo {
+    padding-left: 5px;
 }
 
 </style>
