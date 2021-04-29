@@ -1,9 +1,13 @@
 <template>
 <div>
     <h3>Top Artists</h3>
-    <div v-for="(topartist, index) in topartist" :key="index">
-        <img :src= topartist.artwork_small style="height:50px;width:50px" alt="">
-        {{topartist.artist}}
+    <div id="artistSection">
+        <div v-for="(topartist, index) in topartist" :key="index" id="topArtists">
+        <div>
+            <img :src= topartist.artwork_small style="height:50px;width:50px" alt="">
+            {{topartist.artist}}
+        </div>
+    </div>
     </div>
 </div>
 </template>
@@ -35,9 +39,19 @@
 </script>
 
 <style scoped>
-
 img {
     border-radius: 50%;
+}
+
+#topArtists {
+    display: inline-block;  
+    padding: 15px;
+    vertical-align: top;
+}
+
+#artistSection {
+    height: 150px;
+    overflow-x: scroll;
 }
 
 </style>
