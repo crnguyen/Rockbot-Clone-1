@@ -26,10 +26,10 @@ export default {
     .then(res => res.json())
     .then(response => (this.music = response))
     .then(response => {
-      console.log(response);
+      console.log("now playing response:", response);
     })
     .catch(err => {
-        console.log(err);
+        console.log("now playing error:", err);
     })
   }
 }

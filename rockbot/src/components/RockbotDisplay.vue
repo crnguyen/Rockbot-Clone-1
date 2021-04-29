@@ -6,15 +6,11 @@
     </div>
 
     <component :is="current"></component>
-    
-    <h3>Coming Up</h3>
-    <!-- this is where the Queue component renders -->
-    <Queue/>
 
     <div class="bottomTab" id="bottomTab">
         <button 
         class="grid-child nowPlayingTab"
-        @click="current= 'nowPlaying','Queue'">
+        @click="current= 'Songs'">
         Now Playing</button>
       <!-- if you click on Now Playing tab, render the Now Playing component -->
         <button
@@ -30,14 +26,7 @@
 import NowPlaying from './NowPlaying.vue'
 import Queue from './Queue.vue'
 import Request from './Request.vue'
-
-// const nowPlaying ={
-//   template:"<NowPlaying/>"
-// }
-
-// const request ={
-//   template:"<Request/>"
-// }
+import Songs from './Songs.vue'
 
 export default {
   name: 'RockbotDisplay',
@@ -47,11 +36,12 @@ export default {
   components: {
     NowPlaying,
     Queue,
-    Request
+    Request,
+    Songs
   },
   data(){
     return {
-      current: ["NowPlaying", "Queue"]
+      current: ["Songs"]
     }
   },
   methods: {
