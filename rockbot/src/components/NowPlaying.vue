@@ -58,7 +58,6 @@ img {
 
 p {
     font-size: 20px;
-    /* font-size: 2vw; */
 }
 
 b {

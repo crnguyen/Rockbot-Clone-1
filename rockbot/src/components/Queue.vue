@@ -61,8 +61,6 @@ export default {
 <style scoped>
 #Queue {
     text-align: left;
-    /* padding-left: 30px;
-    padding-bottom: 15px; */
     padding: 0px 30px 15px 30px;
     height: 150px;
     overflow-x: scroll;

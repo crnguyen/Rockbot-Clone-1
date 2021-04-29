@@ -59,14 +59,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 20px 0 0 0;
-  font-weight: bold;
-  text-decoration: underline;
-  letter-spacing: 3;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding-bottom: 10px;
-}
 
 ul {
   list-style-type: none;
@@ -104,15 +96,12 @@ a {
   border-top: black solid 2px;
   border-right: black solid 1px;
   height: 50px;
-  /* border-bottom: black solid 2px; */
 }
 
 .requestTab {
   border-top: black solid 2px;
   border-left: black solid 1px;
   height: 50px;
-
-  /* border-bottom: black solid 2px; */
 }
 
 </style>
