@@ -33,6 +33,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   min-height: 300px;
+  max-height: 300px;
   /* margin-top: 60px; */
 }
 
