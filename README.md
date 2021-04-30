@@ -43,8 +43,9 @@ This seemed like a pretty easy fix, but I also ran out of time on this as well. 
 ---
 - Webpack
 - Ability to upvote a singular artist in the queue
-- Ability to add an artist/song from a search to the queue
-- Auto refresh Now Playing and Queue section every 30 sec 
+- Ability to add an artist/song from a search to the queue using one of the Write method API calls
+- Auto refresh Now Playing and Queue section every 30 sec
+- Put API key in a .env file
 - Go back and fix syntax of code/remove white spaces/extra comments
 
 Resources Used

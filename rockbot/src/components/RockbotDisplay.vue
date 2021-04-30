@@ -77,6 +77,7 @@ a {
   width: 60%;
   margin: auto;
   box-shadow: 5px 9px #888888;
+  /* max-height: 500px; */
 }
 
 .titleDisplay {
