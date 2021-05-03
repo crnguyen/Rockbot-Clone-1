@@ -23,7 +23,7 @@
     fetch("https://api.rockbot.com/v3/engage/top_artists", {
     method: "GET",
     headers: {
-      Authorization: "2ab742c917f872aa88644bc8f995e03159b2"
+      Authorization: process.env.VUE_APP_ROCKBOT_KEY
     }
   })
     .then(res => res.json())
